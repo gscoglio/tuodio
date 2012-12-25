@@ -1,0 +1,28 @@
+.spam_trigger {
+padding:10px;
+border:1px solid #CDC085;
+background:#FBFBDC;
+color:#000;
+margin-bottom:15px;
+}
+
+.spam_trigger h3 {
+margin:0 0 5px 0;
+padding:0 0 2px 0;
+font-size:18px;
+color:#000;
+border-bottom:1px dashed #CDC085;
+}
+
+.spam_trigger_moderated {
+
+}
+
+.spam_trigger_discarded {
+
+}
+
+.spam_trigger_deleted {
+
+}
+

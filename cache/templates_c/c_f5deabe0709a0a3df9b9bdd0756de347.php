@@ -1,0 +1,1 @@
+<?php /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2011-07-17 15:15:41 PDT */  if ($this->_vars['modulename'] == "admin_language"): ?><script src="./modules/admin_language/js/simpleedit.js" type="text/javascript"></script><?php endif; ?>

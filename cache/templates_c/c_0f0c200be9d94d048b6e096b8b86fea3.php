@@ -1,0 +1,1 @@
+<?php /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2012-08-01 04:35:19 PDT */  echo $this->_vars['message'];  echo $this->_vars['img'];  echo $this->_vars['error']; ?>

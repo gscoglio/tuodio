@@ -1,0 +1,3 @@
+AddDefaultCharset UTF-8
+RewriteRule ^sitemapindex.xml module.php?module=xml_sitemaps_show_sitemap [L]
+RewriteRule ^sitemap-([a-zA-Z0-9]+).xml module.php?module=xml_sitemaps_show_sitemap&amp;i=$1 [L]

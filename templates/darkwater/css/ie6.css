@@ -1,0 +1,13 @@
+.featurebox li.rmore {margin-left:130px;}
+
+h1, h2, h3, h4, h5, h6 {position:relative;}
+
+#navbar {margin:-1px 0px 0 0px;}
+
+#header h1#logo-text a {position: absolute;margin: 0; padding: 0;font: bolder 55px 'Trebuchet MS', Arial, Sans-serif;letter-spacing: -3px;color: #fff;text-transform: none;text-decoration: none;background: transparent;top: 18px; left: 35px;}
+#header p#slogan {position: absolute;margin: 10px; padding: 0;font: bold 13px 'Trebuchet MS', Arial, Sans-serif;text-transform: none;color: #FFF;top: 80px; left: 50px;}
+.vote-publish a {font-size:26px;font-color:#FFFFFF;letter-spacing:-1px;text-decoration:none;line-height:48px;padding:15px 0 6px;}
+.vote-publish a small {font-size:12px;letter-spacing:0;text-decoration:none;}
+.vote-publish a:hover,.vote-publish a:active {text-decoration:none;color:#b7b7b7;}
+
+#cab ul {padding:0px 0px 0px 15px;margin-left:-8px;}

@@ -1,0 +1,5 @@
+# Como ejecutar un archivo php
+php /full/path/to/script.php
+
+# Como ejecutar un archivo php y guardar el output
+php /full/path/to/script.php > /full/path/to/log.txt
