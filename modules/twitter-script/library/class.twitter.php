@@ -51,7 +51,7 @@ class Twitter {
     }
 
     private function follow($list) {
-        $count = 0;
+        $count = $i = 0;
         $fecha = date('Ymd');
         foreach($list as $id) {
             $result = $this->connection->post('friendships/create', array('user_id' => $id));
@@ -75,7 +75,7 @@ class Twitter {
 
   $errors =  array('Could not follow user: Sorry, this account has been suspended.',
        'Not found',
-       "You've already requested to follow",
+       "Ya has solicitado seguir a",
         );
 
   foreach($errors as $e){
@@ -141,13 +141,13 @@ class Twitter {
 
         $followers = $this->getFollowers();
         $following = $this->getFollowing();
-
+        
         $this->log('Followers: ' . count($followers));
         $this->log('Following: ' . count($following));
 
         $shouldUnFollow = array_diff($following, $followers);
         $shouldFollow = array_diff($followers, $following);
-
+        
         $this->log('Should Follow: ' . count($shouldFollow));
         $this->log('Should UnFollow: ' . count($shouldUnFollow));
 
