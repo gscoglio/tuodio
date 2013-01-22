@@ -190,7 +190,7 @@ function upload_save_files()
 	    foreach ($_FILES["upload_files"]["error"] as $key => $err) 
 	    {
 		if ($_FILES["upload_files"]["size"][$key]/1024 > $settings['filesize'])
-		    $error = "Maximum file size ({$settings['filesize']} Kb) exceeded";
+		    $error = "Tamaño máximo del archivo excedido ({$settings['filesize']} Kb)";
 	    	elseif ($err == UPLOAD_ERR_OK) 
 	  	{
 	            $tmp_name = $_FILES["upload_files"]["tmp_name"][$key];
