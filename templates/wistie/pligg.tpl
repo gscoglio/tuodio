@@ -4,6 +4,7 @@
 	{checkActionsTpl location="tpl_pligg_head_start"}
 	{include file="meta.tpl"}
 
+        <link href="{$my_pligg_base}/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 	<link rel="stylesheet" type="text/css" href="{$my_pligg_base}/templates/{$the_template}/css/style.css" media="screen" />
 	{if $pagename eq "submit"}<link rel="stylesheet" type="text/css" href="{$my_pligg_base}/templates/{$the_template}/css/wick.css" />{/if}
 	<link rel="stylesheet" type="text/css" href="{$my_pligg_base}/templates/{$the_template}/css/dropdown.css" media="screen" />
