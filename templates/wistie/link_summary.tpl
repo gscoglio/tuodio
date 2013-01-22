@@ -90,7 +90,6 @@
                                 
 				{if $url_short neq "http://" && $url_short neq "://"}
 					(<a href="{$url}" {if $open_in_new_window eq true} target="_blank"{/if}  {if $story_status neq "published"}rel="nofollow"{/if}>{$url_short}</a>)
-				{else}
 				{/if}
 			
 				{if $isadmin || $user_logged_in eq $link_submitter}
