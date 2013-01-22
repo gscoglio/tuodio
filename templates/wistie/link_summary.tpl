@@ -78,11 +78,16 @@
 			{checkActionsTpl location="tpl_pligg_story_title_end"}
 			</h2>
 			
-			<span class="subtext">
-				{#PLIGG_Visual_LS_Posted_By#} 
+			<span class="subtext"> 
 				{* {if $UseAvatars neq "0"}<span id="ls_avatar-{$link_shakebox_index}"><img src="{$Avatar_ImgSrc}" alt="Avatar" /></span>{/if} *}
-				<a href="{$submitter_profile_url}">{$link_submitter}</a> {$link_submit_timeago} {#PLIGG_Visual_Comment_Ago#}
-				
+                                {if $link_submitter eq "anonymous"}
+                                    {$link_submit_timeago} {#PLIGG_Visual_Comment_Ago#}
+				{else}
+                                    {#PLIGG_Visual_LS_Posted_By#}
+                                    <a href="{$submitter_profile_url}">{$link_submitter}</a> {$link_submit_timeago} {#PLIGG_Visual_Comment_Ago#}
+                                {/if}
+                                
+                                
 				{if $url_short neq "http://" && $url_short neq "://"}
 					(<a href="{$url}" {if $open_in_new_window eq true} target="_blank"{/if}  {if $story_status neq "published"}rel="nofollow"{/if}>{$url_short}</a>)
 				{else}
