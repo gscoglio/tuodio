@@ -52,9 +52,6 @@
 	<label>Seguinos en:  </label>
 	<a href="http://www.facebook.com/pages/TuOdiocomar/302150954228" target="_blank"><img src="{$my_pligg_base}/templates/{$the_template}/images/Facebook-icon-small.png" align="top" border="0" alt="Facebook" /></a>
 	<a href="http://twitter.com/tuodio" target="_blank"><img src="{$my_pligg_base}/templates/{$the_template}/images/Twitter-icon-small.png" align="top" border="0" alt="Twitter" /></a>
-	{if $URL_rss_page}
-	<a href="{$URL_rss_page}" target="_blank"><img src="{$my_pligg_base}/templates/{$the_template}/images/RSS-icon-small.png" align="top" border="0" alt="RSS" /></a>
-	{/if}
 </div>
 <!-- END RSS -->
 
@@ -71,7 +68,7 @@
 {if $pagename eq "live" || $pagename eq "live_unpublished" || $pagename eq "live_published" || $pagename eq "live_comments"}<h1>{#PLIGG_Visual_Live#}</h1>{/if}
 {if $pagename eq "advancedsearch"}<h1>{#PLIGG_Visual_Search_Advanced#}</h1>{/if}
 {if $pagename eq "profile"}<h1>{#PLIGG_Visual_Profile_ModifyProfile#}</h1>{/if}
-{if $pagename eq "user"}<h1><span style="text-transform:capitalize">{$page_header}</span> <a href="{$user_rss, $view_href}" target="_blank"><img src="{$my_pligg_base}/templates/{$the_template}/images/rss.gif" style="margin-left:6px;border:0;"></a></h1>{/if}
+{if $pagename eq "user"}<h1><span style="text-transform:capitalize">{$page_header}</span> </h1>{/if}
 
 {if $pagename eq "published" || $pagename eq "index"}<h1>{#PLIGG_Visual_Published_News#}{/if}
 {if $pagename eq "upcoming"}<h1>{#PLIGG_Visual_Pligg_Queued#}{/if}
