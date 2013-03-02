@@ -33,19 +33,18 @@ function counter(text) {
 			{/if}
 		</fieldset>
 	{/if}
-<br /><br />
-<h2>{#PLIGG_Visual_Submit2_Details#}</h2>
+<br />
+<h2 style="padding-bottom: 10px;">{#PLIGG_Visual_Submit2_Details#}</h2>
 	<form action="{$URL_submit}" method="post" name="thisform" id="thisform" enctype="multipart/form-data" onSubmit="return checkForm()">
-		<label>{#PLIGG_Visual_Submit2_Title#}: </label>{#PLIGG_Visual_Submit2_TitleInstruct#}<br/>
-		<input type="text" id="title" class="text" name="title" value="{if $submit_title}{$submit_title}{else}{$submit_url_title}{/if}" size="60" maxlength="{$maxTitleLength}" />
+		<label>{#PLIGG_Visual_Submit2_Title#} </label>{#PLIGG_Visual_Submit2_TitleInstruct#}<br/>
+		<input style="width: 590px;" type="text" id="title" class="text" name="title" value="{if $submit_title}{$submit_title}{else}{$submit_url_title}{/if}" size="60" maxlength="{$maxTitleLength}" />
 
 		<br /><br/>
 
 		<label>{#PLIGG_Visual_Submit2_Category#}: </label>{#PLIGG_Visual_Submit2_CatInstruct#}<br/>
 		<select name="category">
-			<option value = "">{#PLIGG_Visual_Submit2_CatInstructSelect#}
 			{section name=thecat loop=$submit_cat_array}
-			   <option value = "{$submit_cat_array[thecat].auto_id}" {if $submit_cat_array[thecat].auto_id == $submit_category}selected{/if}>
+			   <option value = "{$submit_cat_array[thecat].auto_id}" {if $submit_cat_array[thecat].auto_id == 1}selected{/if} {if $submit_cat_array[thecat].auto_id == $submit_category}selected{/if}>
 					  {if $submit_cat_array[thecat].spacercount lt $submit_lastspacer}{$submit_cat_array[thecat].spacerdiff|repeat_count:''}{/if}
 					  {if $submit_cat_array[thecat].spacercount gt $submit_lastspacer}{/if}
 					  {$submit_cat_array[thecat].spacercount|repeat_count:'&nbsp;&nbsp;&nbsp;'}
@@ -71,7 +70,7 @@ function counter(text) {
 		{if $enable_tags}
 			<label>{#PLIGG_Visual_Submit2_Tags#}: </label>
 			<strong>{#PLIGG_Visual_Submit2_Tags_Inst1#}</strong> {#PLIGG_Visual_Submit2_Tags_Example#} <em>{#PLIGG_Visual_Submit2_Tags_Inst2#}</em><br/>
-			<input type="text" id="tags" class="wickEnabled" name="tags" value="{$tags_words}" size="60" maxlength="{$maxTagsLength}" /><br /><br />
+			<input style="width: 590px;" type="text" id="tags" class="wickEnabled" name="tags" value="{$tags_words}" size="60" maxlength="{$maxTagsLength}" /><br /><br />
 			<script type="text/javascript" language="JavaScript" src="{$my_pligg_base}/templates/{$the_template}/js/tag_data.js"></script> 
 			<script type="text/javascript" language="JavaScript" src="{$my_pligg_base}/templates/{$the_template}/js/wick.js"></script> 
 			<br />
@@ -80,12 +79,7 @@ function counter(text) {
 		{checkActionsTpl location="tpl_pligg_submit_step2_middle"}
 
 		<label>{#PLIGG_Visual_Submit2_Description#}: </label>{#PLIGG_Visual_Submit2_DescInstruct#}
-		{if $Story_Content_Tags_To_Allow eq ""}
-			<br/><strong>{#PLIGG_Visual_Submit2_No_HTMLTagsAllowed#} </strong>{#PLIGG_Visual_Submit2_HTMLTagsAllowed#}
-		{else}
-			<br/>{#PLIGG_Visual_Submit2_HTMLTagsAllowed#}: {$Story_Content_Tags_To_Allow}
-		{/if}
-		<br/><textarea name="bodytext" class="bodytext" rows="40" cols="80" id="bodytext" maxlength="{$maxStoryLength}" WRAP="SOFT" onKeyPress="counter(this)" onKeyDown="counter(this)" onkeyup="counter(this); if(!this.form.summarycheckbox || !this.form.summarytext) return; if(this.form.summarycheckbox.checked == false) {ldelim}this.form.summarytext.value = this.form.bodytext.value.substring(0, {$StorySummary_ContentTruncate});{rdelim}textCounter(this.form.summarytext,this.form.remLen, {$StorySummary_ContentTruncate});">{if $submit_url_description}{$submit_url_description}{/if}{$submit_content}</textarea><br />
+		<br/><textarea style="height:200px; width:590px;" name="bodytext" class="bodytext" rows="40" cols="80" id="bodytext" maxlength="{$maxStoryLength}" WRAP="SOFT" onKeyPress="counter(this)" onKeyDown="counter(this)" onkeyup="counter(this); if(!this.form.summarycheckbox || !this.form.summarytext) return; if(this.form.summarycheckbox.checked == false) {ldelim}this.form.summarytext.value = this.form.bodytext.value.substring(0, {$StorySummary_ContentTruncate});{rdelim}textCounter(this.form.summarytext,this.form.remLen, {$StorySummary_ContentTruncate});">{if $submit_url_description}{$submit_url_description}{/if}{$submit_content}</textarea><br />
 		<input size=2 value='{$storylen}' name=text_num disabled> {#PLIGG_Visual_Total_Chars#}<br>
 		{if $Spell_Checker eq 1}<input type="button" name="spelling" value="{#PLIGG_Visual_Check_Spelling#}" class="submit" onClick="openSpellChecker('bodytext');"/>{/if}
 
@@ -131,8 +125,8 @@ function counter(text) {
 			<label>Previsualiza tu Odio y confirmalo en la siguiente pantalla:</label>
 			<br />
 		</div>
-		
-		<input class="button_max" type="submit" value="{#PLIGG_Visual_Submit2_Continue#}" />
+		<br />
+		<input class="btn btn-large btn-info" type="submit" value="{#PLIGG_Visual_Submit2_Continue#}" />
 		
 		{checkActionsTpl location="tpl_pligg_submit_step2_end"}
 		

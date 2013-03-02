@@ -76,10 +76,10 @@
 		<input type="hidden" name="trackback" value="{$templatelite.post.trackback|escape:"html"}" />
 		<label>Si todo est&aacute; bien, ya puedes enviar tu Odio!</label>
 		
-		<br style="clear: both;" /><hr />
+		<br style="clear: both;" />
 		<center>
-		<input type="button" onclick="gPageIsOkToExit = true; document.location.href='{$my_base_url}{$my_pligg_base}/submit.php?id='+this.form.id.value+'&trackback='+this.form.trackback.value;" value="{#PLIGG_Visual_Submit3_Modify#}" class="log2">&nbsp;&nbsp;
-		<input type="button" onclick="submitEdgeStory();" value="{#PLIGG_Visual_Submit3_SubmitStory#}" class="submit" />
+		<input type="button" onclick="gPageIsOkToExit = true; document.location.href='{$my_base_url}{$my_pligg_base}/submit.php?id='+this.form.id.value+'&trackback='+this.form.trackback.value;" value="{#PLIGG_Visual_Submit3_Modify#}" class="log2 btn btn-large">&nbsp;&nbsp;
+		<input type="button" onclick="submitEdgeStory();" value="{#PLIGG_Visual_Submit3_SubmitStory#}" class="submit btn btn-large btn-info" />
 		</center>
 	{checkActionsTpl location="tpl_pligg_submit_step3_end"} 
 	</form>

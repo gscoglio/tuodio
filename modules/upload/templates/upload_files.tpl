@@ -6,8 +6,8 @@
 ({$upload_extensions} {#PLIGG_Upload_Extensions_Allowed#})<br /><br />
 
 <script>
-var uploading = '<fieldset style="border:1px solid #eee;padding:10px;margin-bottom:10px;font-weight:bold;width:450px;"><h2>{#PLIGG_Upload_Uploading#}...</h2></fieldset>';
-var failed = '<fieldset style="border:1px solid #eee;padding:10px;margin-bottom:10px;font-weight:bold;width:450px;"><h2>{#PLIGG_Upload_Failed#}...</h2></fieldset>';
+var uploading = '<fieldset style="border:1px solid #eee;padding:10px;margin-bottom:10px;font-weight:bold;width:570px;"><h2>{#PLIGG_Upload_Uploading#}...</h2></fieldset>';
+var failed = '<fieldset style="border:1px solid #eee;padding:10px;margin-bottom:10px;font-weight:bold;width:570px;"><h2>{#PLIGG_Upload_Failed#}...</h2></fieldset>';
 var my_pligg_base = '{$my_pligg_base}';
 var mandatory = '{#PLIGG_Upload_Mandatory_Error#}';
 var choose_file = '{#PLIGG_Upload_Choose_File#}';
@@ -60,7 +60,7 @@ var choose_url = '{#PLIGG_Upload_Choose_URL#}';
 
     {/php}
 >
-	<fieldset style="border:1px solid #eee;padding:10px;margin-bottom:10px;font-weight:bold;width:450px;">
+	<fieldset style="border:1px solid #eee;padding:10px;margin-bottom:10px;font-weight:bold;width:570px;">
     	<form method=post enctype="multipart/form-data" action='{$my_pligg_base}/modules/upload/upload.php'  target='upload_iframe_{$number}'>
 		
 		<input type='hidden' name='id' value='{$submit_id}'>
@@ -89,6 +89,6 @@ var choose_url = '{#PLIGG_Upload_Choose_URL#}';
 <script>
 var upload_fields = {$upload_fields};
 </script>
-<button onclick='if (upload_fields < {$upload_maxnumber}) add_upload_field({$upload_maxnumber}); if (++upload_fields >= {$upload_maxnumber}) this.disabled=true;' {if $upload_fields>=$upload_maxnumber}disabled{/if}>{#PLIGG_Upload_Add_File#}</button>
+<!--<button onclick='if (upload_fields < {$upload_maxnumber}) add_upload_field({$upload_maxnumber}); if (++upload_fields >= {$upload_maxnumber}) this.disabled=true;' {if $upload_fields>=$upload_maxnumber}disabled{/if}>{#PLIGG_Upload_Add_File#}</button>-->
 
 {config_load file=upload_pligg_lang_conf}
